@@ -5,12 +5,15 @@ CONFIG -= qt
 
 SOURCES += \
         Archivo.cpp \
+        BuscadorTexto.cpp \
         Problema1.cpp \
         Problema2.cpp \
+        Problema3.cpp \
         cuentacorriente.cpp \
         main.cpp
 
 HEADERS += \
     Archivo.h \
+    BuscadorTexto.h \
     Problemas.h \
     cuentacorriente.h
