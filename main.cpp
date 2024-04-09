@@ -1,5 +1,6 @@
 #include "CuentaCorriente.h"
 #include "Problemas.h"
+#include "Archivo.h"
 #include <iostream>
 using namespace std;
 
@@ -84,7 +85,7 @@ int main() {
                             }
                             break;
                         case 5:
-                            cout << "¡Hasta luego!\n";
+                            cout << "Hasta luego!\n";
                             continueCuentaCorriente = false;
                             break;
                         default:
@@ -95,9 +96,28 @@ int main() {
                 break;
             }
             case 2: {
+                Problema2 p;
+                p.resolverProblema2();
+                Archivo archivo;
+                string ubicacion;
+                string opcion;
 
+                cout << "Ingrese la ubicacion del archivo: ";
+                getline(cin, ubicacion);
+                getline(cin, ubicacion);
+                cout << "Desea escribir o leer el archivo? (e/l): ";
+                getline(cin, opcion);
+
+                if (opcion == "e" || opcion == "E") {
+                    archivo.escribir(ubicacion);
+                } else if (opcion == "l" || opcion == "L") {
+                    archivo.leer(ubicacion);
+                } else {
+                    cout << "Opcion no valida.\n";
+                }
                 break;
             }
+
             case 3: {
 
                 break;
@@ -111,7 +131,7 @@ int main() {
                 break;
             }
             case 6: {
-                cout << "¡Hasta luego!";
+                cout << "Hasta luego!.\n";
                 break;
             }
         }

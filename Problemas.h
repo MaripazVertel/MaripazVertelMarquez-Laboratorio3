@@ -6,4 +6,9 @@ public:
     void resolverProblema();
 };
 
+class Problema2{
+public:
+    void resolverProblema2();
+};
+
 #endif // PROBLEMAS_H
