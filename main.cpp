@@ -2,8 +2,13 @@
 #include "Problemas.h"
 #include "Archivo.h"
 #include "BuscadorTexto.h"
+
+#include "Canciones.cpp"
 #include <iostream>
 using namespace std;
+
+
+
 int main() {
     int opcion;
     CuentaCorriente cuenta;
@@ -154,7 +159,57 @@ int main() {
                 break;
             }
             case 5: {
-                break;
+            Problema5 p;
+            p.resolverProblema5();
+            int opcion;
+
+                do {
+                    cout << "\n1. Agregar cancion\n";
+                    cout << "2. Eliminar cancion\n";
+                    cout << "3. Ordenar canciones\n";
+                    cout << "4. Cambiar cancion\n";
+                    cout << "5. Imprimir canciones\n";
+                    cout << "6. Guardar en archivo\n";
+                    cout << "7. Cargar de archivo\n";
+                    cout << "8. Salir\n";
+                    cout << "Seleccione una opcion: ";
+                    cin >> opcion;
+
+                    switch (opcion) {
+                        case 1:
+                            agregarCancion();
+                            break;
+                        case 2:
+                            eliminarCancion();
+                            break;
+                        case 3:
+                            ordenarCanciones();
+                            break;
+                        case 4:
+                            cambiarCancion();
+                            break;
+                        case 5:
+                            imprimirCanciones();
+                            break;
+                        case 6:
+                            guardarEnArchivo();
+                            break;
+                        case 7:
+                            cargarDeArchivo();
+                            break;
+                        case 8:
+                            cout << "Hasta luego!\n";
+                            break;
+                        default:
+                            cout << "Opcion invalida, intente de nuevo.\n";
+                            break;
+                    }
+                } while (opcion != 8);
+
+                return 0;
+
+                 break;
+
             }
             case 6: {
                 cout << "Hasta luego!.\n";

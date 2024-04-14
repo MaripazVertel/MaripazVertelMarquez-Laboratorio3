@@ -15,4 +15,9 @@ class Problema3{
 public:
     void resolverProblema3();
 };
+
+class Problema5{
+public:
+    void resolverProblema5();
+};
 #endif // PROBLEMAS_H
